@@ -1,4 +1,6 @@
+import Footer from "./components/Footer";
 import LoopTape from "./components/LoopTape";
+import ContactMe from "./ContactMe";
 import Content from "./Content";
 import LandingPage from "./LandingPage";
 
@@ -8,6 +10,7 @@ export default function Home() {
       <LandingPage/>
       <LoopTape/>
       <Content />
+      <Footer/>
     </div>
   );
 }
