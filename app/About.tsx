@@ -7,7 +7,7 @@ function About() {
             <div className='mx-[9%] p-8 md:border-2 border rounded-xl backdrop-blur-sm'>
                 <div className='flex justify-between'>
                     <div className='hidden md:block w-[30em] pl-5 pr-20'>
-                        <div className='border w-full h-full rounded-full' />
+                        <div className='bg-art-bg bg-cover opacity-25 w-full h-full rounded-full' />
                     </div>
                     <div className=' text-right'>
                         <p className='text-6xl font-bold'>About me<span className=' text-base-purple'>.</span></p>
