@@ -14,7 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "grid-wave": "url('/bg-image 1.png')",
         "glass-border": "url('/border.svg')",
-        "text-bg": "url('/textbg.svg')"
+        "text-bg": "url('/textbg.svg')",
+        "art-bg": "url('/art.jpg')"
       },
       fontFamily: {
         nohemi: ['var(--font-nohemi)'],

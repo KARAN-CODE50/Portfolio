@@ -7,7 +7,7 @@ function Navbar() {
         <div className='text-[1.6em] md:text-3xl font-medium'>
             <p>Karan Sarawagi<span className='text-base-purple'>.</span></p>
         </div>
-        <div className='rounded-full p-1 backdrop-blur-sm'>
+        <div className='md:hidden rounded-full p-1 backdrop-blur-sm'>
           <GanttChart size={30}/> 
         </div>
         <div className='hidden md:flex text-xl gap-[7em] font-light'>

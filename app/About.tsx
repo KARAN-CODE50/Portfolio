@@ -14,13 +14,13 @@ function About() {
                         <p className=' font-light'>Explore my diverse range of projects, showcasing my ability to apply theoretical knowledge to practical solutions.</p>
                     </div>
                 </div>
-                <div className='md:flex flex flex-col-reverse md:pl-5 items-end mt-5 md:gap-10 gap-5'>
-                    <p className='md:w-[80%] md:text-[1.4em] text-sm font-light text-justify'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <div className='md:w-[50%] w-full h-32 mt-20 relative rounded-2xl'>
+                <div className='md:flex md:flex-row flex flex-col-reverse md:pl-5 items-end mt-5 md:gap-10 gap-5'>
+                    <p className='md:w-[80%] md:text-[1.5em] md:leading-[25px] text-sm font-light text-justify'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <div className='md:w-[50%] w-full h-32 md:h-[18em] mt-20 relative rounded-2xl'>
                         <div className='absolute z-10 bottom-0 rounded-xl overflow-hidden'>
                             <Image alt='pic' src='/pic.svg' width={500} height={500} />
                         </div>
-                        <div className='absolute z-0 h-32 bg-gradient-to-b from-slate-200/50 to-white/0 rounded-xl w-full bottom-0'/>
+                        <div className='absolute z-0 h-32 md:h-[18em] bg-gradient-to-b from-slate-200/50 to-white/0 rounded-xl w-full bottom-0'/>
                     </div>
                 </div>
             </div>
