@@ -4,7 +4,7 @@ import React from 'react'
 function About() {
     return (
         <div className='pt-[5em] font-nohemi'>
-            <div className='mx-[9%] p-8 md:border-2 border rounded-xl backdrop-blur-sm'>
+            <div className='mx-[9%] p-8 md:border-2 border rounded-xl blur-bg-md'>
                 <div className='flex justify-between'>
                     <div className='hidden md:block w-[30em] pl-5 pr-20'>
                         <div className='bg-art-bg bg-cover opacity-25 w-full h-full rounded-full' />
