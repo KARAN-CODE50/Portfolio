@@ -64,7 +64,7 @@ const bookData = [
 
 function Papers() {
   return (
-    <div className='text-white px-10 bg-repeat bg-grid-wave-light min-h-screen bg-contain font-nohemi'>
+    <div className='text-white md:px-10 bg-repeat bg-grid-wave-light min-h-screen bg-contain font-nohemi'>
       <Navbar />
       <div className='md:mx-20 mx-7 mt-16 flex flex-col md:gap-3 gap-2'>
         <div className='leading-[25px] flex md:text-6xl text-2xl'>
@@ -72,32 +72,32 @@ function Papers() {
         </div>
         <p className='md:text-xl text-[0.8em] text-neutral-200 font-light font-["FK_Roman_Standard_Trial_Regular"]'>Explore a comprehensive collection of my scholarly contributions across various formats. This includes patents that highlight innovative solutions, peer-reviewed journal articles that present in-depth research findings, conference papers that share insights at leading industry events, and book chapters that provide extensive analyses on key topics. Each piece reflects my dedication to advancing knowledge and contributing to the academic community.</p>
       </div>
-      <div className='mx-20 mt-16'>
-        <p className='md:text-5xl'>Patents</p>
-        <div className='pt-5 pb-20 flex flex-col gap-8'>
+      <div className='md:mx-20 mx-7 md:mt-16 mt-7'>
+        <p className='md:text-5xl text-xl'>Patents</p>
+        <div className='md:pt-5 pt-2 md:pb-20 pb-10 flex flex-col gap-8'>
           {patentsData.map((item, i) => (
             <PatentCards key={i} no={i} title={item.title} desc={item.desc} image={item.image} href={item.href} />
           ))}
         </div>
         <div>
-          <p className='md:text-5xl'>Journal</p>
-          <div className=' pt-5 pb-20'>
+          <p className='md:text-5xl text-xl'>Journal</p>
+          <div className='md:pt-5 pt-2 md:pb-20 pb-10'>
             {journalData.map((item, i) => (
               <JournalCard key={i} title={item.title} desc={item.desc} />
             ))}
           </div>
         </div>
         <div>
-          <p className='md:text-5xl'>Conference Paper</p>
-          <div className='pt-5 pb-20 grid md:grid-cols-3 gap-10'>
+          <p className='md:text-5xl text-xl'>Conference Paper</p>
+          <div className='md:pt-5 pt-2 md:pb-20 pb-10 grid md:grid-cols-3 md:gap-10 gap-5'>
             {researchData.map((item, i) => (
               <PaperCard key={i} title={item.title} link={item.link}/>
             ))}
           </div>
         </div>
         <div>
-          <p className='md:text-5xl'>Book Chapters</p>
-          <div className='pt-5 pb-20 flex gap-10'>
+          <p className='md:text-5xl text-xl'>Book Chapters</p>
+          <div className='md:pt-5 pt-2 md:pb-20 pb-10 flex md:flex-row flex-col md:gap-10 gap-5'>
             {bookData.map((item, i) => (
               <BookCards key={i} title={item.title} href={item.link}/>
             ))}

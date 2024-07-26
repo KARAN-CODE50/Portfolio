@@ -13,7 +13,7 @@ function PaperCard({ title, link }: PaperProp) {
     return (
         <motion.div whileHover="hovered" className='border md:h-[35vw] h-[100vw] max-w-[55vh] p-10 text-center rounded-xl overflow-hidden backdrop-blur-[5px]'>
             <div className=' flex flex-col items-center justify-center gap-3'>
-                <p className='md:text-xl font-light text-xl'>{title}</p>
+                <p className='md:text-xl font-light text-lg'>{title}</p>
                 <motion.a href={link} target="_blank" variants={{ hovered: { backgroundColor: "#242424", color: "#ffffff" } }} className='font-[500] px-2 py-1 rounded-full flex gap-1 w-fit bg-white text-black'>
                     <Link size={18} />
                     <p className=''>Link</p>

@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion'
+import { Album, BookOpen } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -10,11 +11,14 @@ interface BookProp {
 
 function BookCards({ title, href }: BookProp) {
     return (
-        <motion.a href={href} target="_blank" whileHover="hovered" className=' border flex flex-1 overflow-hidden max-h-[40vh] items-center rounded-xl blur-bg-lg'>
-            <div className='flex-[4] p-10'>
-                <p className=' text-2xl font-[300]'>{title}</p>
+        <motion.a href={href} target="_blank" whileHover="hovered" className=' relative border flex flex-1 overflow-hidden max-h-[40vh] items-center rounded-xl blur-bg-lg'>
+            <div className='flex-[4] md:p-10 p-7 z-20'>
+                <p className=' md:text-2xl font-[300]'>{title}</p>
             </div>
-            <div className='flex-[3] relative h-full'>
+            <div className='md:hidden absolute right-3 opacity-5'>
+                <BookOpen size={100} />
+            </div>
+            <div className='flex-[3] md:relative hidden'>
                 <motion.div variants={{ hovered: {x:-10}}} className=' absolute z-50 top-0 bottom-0 left-0 h-fit rounded-xl overflow-hidden my-auto'>
                     <Image alt='book' src="/book-cover.svg" width={150} height={500} />
                 </motion.div>
