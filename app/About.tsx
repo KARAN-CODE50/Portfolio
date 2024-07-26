@@ -3,7 +3,7 @@ import React from 'react'
 
 function About() {
     return (
-        <div className='pt-[5em] font-nohemi'>
+        <div className='md:pt-[5em] pt-[5vh] font-nohemi'>
             <div className='mx-[9%] p-8 md:border-2 border rounded-xl blur-bg-md'>
                 <div className='flex justify-between'>
                     <div className='hidden md:block w-[30em] pl-5 pr-20'>

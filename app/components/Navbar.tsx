@@ -5,6 +5,10 @@ import React, { useState } from 'react'
 
 const navbarLinks = [
   {
+    name: 'Home',
+    link: '/'
+  },
+  {
     name: 'About',
     link: 'about'
   },
@@ -31,7 +35,7 @@ function Navbar() {
 
   return (
     <div className='flex justify-between items-center pt-6 px-7 md:pt-10 md:px-20 font-nohemi'>
-      <div className='text-[1.6em] md:text-3xl font-medium'>
+      <div className='text-[1.3em] md:text-3xl font-medium'>
         <a href='/'>Karan Sarawagi<span className='text-base-purple'>.</span></a>
       </div>
       <div onClick={toggleMenu} className='md:hidden rounded-full p-1 backdrop-blur-sm'>

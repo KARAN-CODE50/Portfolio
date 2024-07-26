@@ -24,8 +24,8 @@ function Footer() {
             <div className='grid md:grid-cols-3 grid-cols-2 gap-2 md:gap-10 mb-7 mt-4 md:mt-0'>
                 {footerData.map((section, index) => (
                     <div key={index} className='pb-3 md:pb-16'>
-                        <p className='text-lg md:text-xl'>{section.head}</p>
-                        <div className='text-sm md:text-lg font-extralight tracking-wide'>
+                        <p className='text-lg md:text-xl font-light'>{section.head}</p>
+                        <div className='text-sm md:text-lg font-[100] tracking-wide'>
                             {section.data.map((item, subIndex) => (
                                 <p key={subIndex}>{item}</p>
                             ))}
@@ -33,7 +33,7 @@ function Footer() {
                     </div>
                 ))}
             </div>
-            <p className='left-16 text-nowrap bottom-[-30px] absolute opacity-5 md:opacity-[2%] text-5xl md:text-[10em] w-full font-medium'>Karan Sarawagi.</p>
+            <p className='md:left-16 left-0 text-nowrap bottom-[-5px] absolute opacity-5 md:opacity-[2%] text-5xl md:text-[10em] w-full font-bold'>Karan Sarawagi.</p>
         </div>
     );
 }

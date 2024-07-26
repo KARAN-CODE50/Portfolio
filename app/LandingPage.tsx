@@ -14,8 +14,7 @@ function LandingPage() {
           <span className=' font-semibold'>technology, </span> 
           and 
           <span className=' font-semibold'> innovation </span>
-          to fuel 
-          <span className=' font-times text-[1.2em]'> entrepreneurial success</span>
+          to fuel <span className='underline'>entrepreneurial success</span>
         </p>
       </div>
       <div className='hidden md:block font-nohemi font-[300] leading-[1.2em] text-[5em] mx-20 text-center mt-4 pb-16'>

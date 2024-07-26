@@ -20,7 +20,7 @@ function Exp() {
 
   return (
     <div className=' font-nohemi text-[#EBEBEB]'>
-      <div className='md:mx-[9%] mx-[8%] md:px-8 px-2 py-10 border md:border-2 blur-bg-md rounded-xl mt-20'>
+      <div className='md:mx-[9%] mx-[8%] md:px-8 px-2 md:py-10 py-5 border md:border-2 blur-bg-md rounded-xl md:mt-20 mt-[5vh]'>
         <div className='hidden md:block'>
           <div className='flex justify-between'>
             <div className=' text-left pl-5'>
