@@ -9,12 +9,14 @@ const patentsData = [
   {
     title: "Master Slave Robotic Arm",
     desc: "This invention discloses a novel control system and design for robotic arms, aiming to improve user experience, flexibility, and customizability. A key feature is a master-slave control system with a miniature robotic arm mimicking the degrees of freedom of a larger target arm. Users can intuitively control the target arm in real-time by manipulating the miniature arm, offering a more natural experience compared to traditional controls.",
-    image: "/patent-arm-image.svg"
+    image: "/patent-arm-image.svg",
+    href: "https://drive.google.com/drive/folders/1SwgwMR3Ka3n6YS-d5DDx_EhdjEzy-mML"
   },
   {
     title: "Plant Pathogen Detection Device",
     desc: "The Plant Pathogen Detection Device is an innovative tool designed to quickly and accurately identify harmful pathogens in plants. Utilizing advanced sensor technology, this device helps farmers and researchers monitor plant health, prevent disease spread, and ensure optimal crop yields, contributing significantly to sustainable agriculture practices.",
-    image: "/patent-plant-image.svg"
+    image: "/patent-plant-image.svg",
+    href: "https://drive.google.com/drive/folders/1SwgwMR3Ka3n6YS-d5DDx_EhdjEzy-mML"
   },
 ]
 
@@ -51,16 +53,18 @@ const researchData = [
 
 const bookData = [
   {
-    title: "Machine Learning and Data Ethics: A Design of Integrated Framework Towards Intelligent Decision Making"
+    title: "Machine Learning and Data Ethics: A Design of Integrated Framework Towards Intelligent Decision Making",
+    link: "https://easychair.org/publications/preprint_download/tQFm"
   },
   {
-    title: "Leveraging Advanced AI Algorithms to Revolutionize Health Monitoring for Seniors"
+    title: "Leveraging Advanced AI Algorithms to Revolutionize Health Monitoring for Seniors",
+    link: "https://easychair.org/publications/preprint_download/1vRH"
   },
 ]
 
 function Papers() {
   return (
-    <div className='text-white px-10 bg-repeat bg-grid-wave min-h-screen bg-contain font-nohemi'>
+    <div className='text-white px-10 bg-repeat bg-grid-wave-light min-h-screen bg-contain font-nohemi'>
       <Navbar />
       <div className='md:mx-20 mx-7 mt-16 flex flex-col md:gap-3 gap-2'>
         <div className='leading-[25px] flex md:text-6xl text-2xl'>
@@ -70,9 +74,9 @@ function Papers() {
       </div>
       <div className='mx-20 mt-16'>
         <p className='md:text-5xl'>Patents</p>
-        <div className='pt-5 pb-20 space-y-8'>
+        <div className='pt-5 pb-20 flex flex-col gap-8'>
           {patentsData.map((item, i) => (
-            <PatentCards key={i} no={i} title={item.title} desc={item.desc} image={item.image} />
+            <PatentCards key={i} no={i} title={item.title} desc={item.desc} image={item.image} href={item.href} />
           ))}
         </div>
         <div>
@@ -95,7 +99,7 @@ function Papers() {
           <p className='md:text-5xl'>Book Chapters</p>
           <div className='pt-5 pb-20 flex gap-10'>
             {bookData.map((item, i) => (
-              <BookCards key={i} title={item.title}/>
+              <BookCards key={i} title={item.title} href={item.link}/>
             ))}
           </div>
         </div>

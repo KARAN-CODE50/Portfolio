@@ -13,6 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "grid-wave": "url('/bg-image 1.png')",
+        "grid-wave-light": "url('/bg-light.svg')",
         "glass-border": "url('/border.svg')",
         "text-bg": "url('/textbg.svg')",
         "art-bg": "url('/art.jpg')",

@@ -1,24 +1,26 @@
 "use client"
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 interface PatentProp {
     no: number,
     title: string,
     desc: string,
-    image: string
+    image: string,
+    href: string
 }
 
 
-function PatentCards({ no, title, desc, image }: PatentProp) {
+function PatentCards({ no, title, desc, image, href }: PatentProp) {
 
     const titleVariants = (no: number) => ({
         hovered: { color: no === 1 ? "#619AF4" : "#FF9187" }
     });
 
     return (
-        <motion.div whileHover="hovered" initial="initial" className='flex even:text-right even:flex-row-reverse items-center blur-bg-lg border rounded-xl overflow-hidden min-h-[400px]'>
+        <motion.a href={href} target="_blank" whileHover="hovered" initial="initial" className='flex even:text-right even:flex-row-reverse items-center blur-bg-lg border rounded-xl overflow-hidden min-h-[400px]'>
             <div className='flex-[4] p-10 flex flex-col gap-5'>
                 <motion.p variants={titleVariants(no)} className=' text-4xl'>{title}</motion.p>
                 <p className=' text-lg opacity-80 font-["FK_Roman_Standard_Trial_Regular"]'>{desc}</p>
@@ -37,7 +39,7 @@ function PatentCards({ no, title, desc, image }: PatentProp) {
                     <Image alt='image' src={image} width={370} height={500} />
                 </motion.div>
             </div>
-        </motion.div>
+        </motion.a>
     )
 }
 

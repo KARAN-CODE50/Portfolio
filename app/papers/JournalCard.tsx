@@ -10,7 +10,7 @@ interface JournalProp {
 
 function JournalCard({ title, desc }: JournalProp) {
     return (
-        <motion.div whileHover="hovered" className='flex overflow-hidden items-center blur-bg-lg rounded-xl min-h-[350px] border'>
+        <motion.a target='_blank' href='https://assets.cureus.com/uploads/original_article/pdf/248945/20240628-2574-1nm5hu8.pdf' whileHover="hovered" className='flex overflow-hidden items-center blur-bg-lg rounded-xl min-h-[350px] border'>
             <div className='flex-[4] flex flex-col gap-3 py-10 pl-10'>
                 <motion.p variants={{ hovered: { color: "#15bca4"}}} className='text-4xl'>{title}</motion.p>
                 <p className='text-md opacity-70 font-["FK_Roman_Standard_Trial_Regular"]'>{desc}</p>
@@ -28,7 +28,7 @@ function JournalCard({ title, desc }: JournalProp) {
                     <Image src="/journal-image.svg" alt="image" width={450} height={500} />
                 </motion.div>
             </div>
-        </motion.div>
+        </motion.a>
     )
 }
 

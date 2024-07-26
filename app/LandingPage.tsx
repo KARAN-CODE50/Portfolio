@@ -4,7 +4,7 @@ import Avatar from './components/Avatar'
 
 function LandingPage() {
   return (
-    <div className=' bg-grid-wave bg-cover'>
+    <div className=' bg-grid-wave bg-cover relative'>
       <Navbar />
       <Avatar/>
       <div className='md:hidden font-nohemi font-[300] leading-[1.2em] text-[2.1em] text-center pb-10 mx-6'>
