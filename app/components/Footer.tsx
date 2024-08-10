@@ -17,7 +17,7 @@ const footerData = [
 
 function Footer() {
     return (
-        <div className=' relative md:flex md:items-start md:justify-between md:py-10 font-nohemi p-5 overflow-hidden md:px-20'>
+        <div className=' relative bg-bg-color md:flex md:items-start md:justify-between md:py-10 font-nohemi p-5 overflow-hidden md:px-20'>
             <div>
                 <p className='text-2xl font-medium md:text-4xl'>Karan Sarawagi<span className=' text-base-purple'>.</span></p>
             </div>

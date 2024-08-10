@@ -5,16 +5,16 @@ import React, { useState } from 'react'
 
 const navbarLinks = [
   {
-    name: 'Home',
-    link: '/'
-  },
-  {
     name: 'About',
     link: 'about'
   },
   {
-    name: 'Experience',
+    name: 'Publishings',
     link: 'papers'
+  },
+  {
+    name: 'Experience',
+    link: 'experience'
   },
   {
     name: 'Contact',
@@ -58,7 +58,7 @@ function Navbar() {
         )}
       </AnimatePresence>
 
-      <div className='hidden md:flex text-xl gap-[7em] font-light'>
+      <div className='hidden md:flex text-lg gap-[4em] font-light'>
         {navbarLinks.map((item, index) => (
           <motion.a
             initial="initial"

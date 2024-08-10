@@ -64,7 +64,7 @@ const bookData = [
 
 function Papers() {
   return (
-    <div className='text-white md:px-10 bg-repeat bg-grid-wave-light min-h-screen bg-contain font-nohemi'>
+    <div className='text-white md:px-10 bg-repeat bg-grid-wave min-h-screen bg-contain font-nohemi'>
       <Navbar />
       <div className='md:mx-20 mx-7 mt-16 flex flex-col md:gap-3 gap-2'>
         <div className='leading-[25px] flex md:text-6xl text-2xl'>
