@@ -4,10 +4,10 @@ import { CircleXIcon, GanttChart } from 'lucide-react'
 import React, { useState } from 'react'
 
 const navbarLinks = [
-  {
-    name: 'About',
-    link: 'about'
-  },
+  // {
+  //   name: 'About',
+  //   link: 'about'
+  // },
   {
     name: 'Publishings',
     link: 'papers'
@@ -15,6 +15,14 @@ const navbarLinks = [
   {
     name: 'Experience',
     link: 'experience'
+  },
+  {
+    name: 'Projects',
+    link: 'projects'
+  },
+  {
+    name: 'Volunteering',
+    link: 'volunteering'
   },
   {
     name: 'Contact',
