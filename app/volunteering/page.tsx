@@ -64,11 +64,11 @@ function Volunteering() {
     return (
         <div className='text-white md:px-10 bg-repeat bg-grid-wave min-h-screen bg-contain font-nohemi'>
             <Navbar />
-            <div className='md:mx-20 mx-7 mt-16 flex flex-col md:gap-3 gap-2'>
+            <div className='md:mx-20 mx-7 md:mt-16 mt-10 flex flex-col md:gap-3 gap-2'>
                 <div className='leading-[25px] flex md:text-6xl text-2xl'>
                     <p>Volunteering</p>
                 </div>
-                <div className='grid grid-cols-2 gap-4'>
+                <div className='md:grid md:grid-cols-2 gap-4'>
                     {VolData.map((i, idx) => (
                         <VolCard key={idx} title={i.title} company={i.company} date={i.date} sector={i.sector} desc={i.desc} src={i.src} />
                     ))}
@@ -89,7 +89,7 @@ function VolCard({ title, company, date, sector, desc, src }: VolProps) {
         setIndex((prevIndex) => (prevIndex - 1 + src.length) % src.length);
     };
 
-    console.log(src.length)
+    // console.log(src.length)
 
     return (
         <motion.div
@@ -97,11 +97,11 @@ function VolCard({ title, company, date, sector, desc, src }: VolProps) {
         >
             <div className='flex-[2] mb-4'>
                 <div className='flex flex-col mb-2'>
-                    <p className='text-3xl tracking-wide'>{title}</p>
-                    <p className='text-xl font-light'>{company}</p>
-                    <p className='text-lg tracking-wider font-light'>{date}</p>
+                    <p className='md:text-3xl text-2xl tracking-wide'>{title}</p>
+                    <p className='md:text-xl text-lg font-light'>{company}</p>
+                    <p className='md:text-lg text-sm tracking-wider font-light'>{date}</p>
                 </div>
-                <p className='text-base leading-relaxed'>{desc}</p>
+                <p className='text-base text-justify md:text-left leading-relaxed font-light'>{desc}</p>
             </div>
             {src.length !== 1 ? ( <div className='flex-1 flex items-center justify-center'>
                 <motion.div

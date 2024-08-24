@@ -1,9 +1,11 @@
-import React from 'react'
+"use client"
+import React, { useRef } from 'react'
 import Navbar from '../components/Navbar'
 import PatentCards from './PatentCards'
 import JournalCard from './JournalCard'
 import PaperCard from './PaperCard'
 import BookCards from './BookCards'
+import { motion } from 'framer-motion'
 
 const patentsData = [
   {
@@ -63,6 +65,16 @@ const bookData = [
 ]
 
 function Papers() {
+
+  const patentRef = useRef<HTMLDivElement | null>(null)
+  const jorRef = useRef<HTMLDivElement | null>(null)
+  const paperRef = useRef<HTMLDivElement | null>(null)
+  const bookRef = useRef<HTMLDivElement | null>(null)
+
+  const executeScroll = (e: React.RefObject<HTMLDivElement>) => e.current?.scrollIntoView({
+    behavior: 'smooth'
+  })
+
   return (
     <div className='text-white md:px-10 bg-repeat bg-grid-wave min-h-screen bg-contain font-nohemi'>
       <Navbar />
@@ -70,16 +82,36 @@ function Papers() {
         <div className='leading-[25px] flex md:text-6xl text-2xl'>
           <p>Published Papers</p>
         </div>
-        <p className='md:text-xl text-[0.8em] text-neutral-200 font-light font-["FK_Roman_Standard_Trial_Regular"]'>Explore a comprehensive collection of my scholarly contributions across various formats. This includes patents that highlight innovative solutions, peer-reviewed journal articles that present in-depth research findings, conference papers that share insights at leading industry events, and book chapters that provide extensive analyses on key topics. Each piece reflects my dedication to advancing knowledge and contributing to the academic community.</p>
-      </div>
-      <div className='md:mx-20 mx-7 md:mt-16 mt-7'>
-        <p className='md:text-5xl text-xl'>Patents</p>
-        <div className='md:pt-5 pt-2 md:pb-20 pb-10 flex flex-col gap-8'>
-          {patentsData.map((item, i) => (
-            <PatentCards key={i} no={i} title={item.title} desc={item.desc} image={item.image} href={item.href} />
+        <div className='flex md:gap-5 gap-2 md:text-2xl text-sm'>
+          {[
+            { label: 'Patents', ref: patentRef },
+            { label: 'Journals', ref: jorRef },
+            { label: 'Papers', ref: paperRef },
+            { label: 'Books', ref: bookRef },
+          ].map((item, index) => (
+            <motion.div
+              whileHover={{
+                x: 4,
+                y: -4
+              }}
+              onClick={() => executeScroll(item.ref)}
+              key={index}
+              className="cursor-pointer border rounded-md md:p-3 p-2 blur-bg-md">
+              {item.label}
+            </motion.div>
           ))}
         </div>
-        <div>
+      </div>
+      <div className='md:mx-20 mx-7 md:mt-16 mt-7'>
+        <div ref={patentRef}>
+          <p className='md:text-5xl text-xl'>Patents</p>
+          <div className='md:pt-5 pt-2 md:pb-20 pb-10 flex flex-col gap-8'>
+            {patentsData.map((item, i) => (
+              <PatentCards key={i} no={i} title={item.title} desc={item.desc} image={item.image} href={item.href} />
+            ))}
+          </div>
+        </div>
+        <div ref={jorRef}>
           <p className='md:text-5xl text-xl'>Journal</p>
           <div className='md:pt-5 pt-2 md:pb-20 pb-10'>
             {journalData.map((item, i) => (
@@ -87,19 +119,19 @@ function Papers() {
             ))}
           </div>
         </div>
-        <div>
+        <div ref={paperRef}>
           <p className='md:text-5xl text-xl'>Conference Paper</p>
           <div className='md:pt-5 pt-2 md:pb-20 pb-10 grid md:grid-cols-3 md:gap-10 gap-5'>
             {researchData.map((item, i) => (
-              <PaperCard key={i} title={item.title} link={item.link}/>
+              <PaperCard key={i} title={item.title} link={item.link} />
             ))}
           </div>
         </div>
-        <div>
+        <div ref={bookRef}>
           <p className='md:text-5xl text-xl'>Book Chapters</p>
           <div className='md:pt-5 pt-2 md:pb-20 pb-10 flex md:flex-row flex-col md:gap-10 gap-5'>
             {bookData.map((item, i) => (
-              <BookCards key={i} title={item.title} href={item.link}/>
+              <BookCards key={i} title={item.title} href={item.link} />
             ))}
           </div>
         </div>

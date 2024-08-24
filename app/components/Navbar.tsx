@@ -26,7 +26,7 @@ const navbarLinks = [
   },
   {
     name: 'Contact',
-    link: 'contact'
+    link: null
   },
 ]
 
@@ -37,8 +37,20 @@ function Navbar() {
 
   const [openMenu, setOpenMenu] = useState(false);
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight - 1000,
+      behavior: 'smooth',
+    });
+  };
+
   function toggleMenu() {
     setOpenMenu(prevState => !prevState);
+  }
+
+  function twoFunction() {
+    scrollToBottom();
+    toggleMenu();
   }
 
   return (
@@ -56,11 +68,11 @@ function Navbar() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ ease: [0.87, 0, 0.13, 1]}}
+            transition={{ ease: [0.87, 0, 0.13, 1] }}
             className='blur-bg rounded-l-lg border-l-2 border-zinc-400 h-screen space-y-5 flex flex-col items-end z-50 p-10 fixed right-0 top-0'>
             <CircleXIcon onClick={toggleMenu} className='mb-10 text-zinc-500' />
             {navbarLinks.map((item, i) => (
-              <a key={i} className='block text-white' href={item.link}>{item.name}</a>
+              <a onClick={!item.link ? twoFunction : undefined} key={i} className='block text-white' href={item.link ? `/${item.link}` : "#"}>{item.name}</a>
             ))}
           </motion.div>
         )}
@@ -73,7 +85,8 @@ function Navbar() {
             whileHover="hovered"
             className='relative overflow-hidden leading-none'
             key={index}
-            href={item.link}
+            href={item.link ? `/${item.link}` : "#"}
+            onClick={!item.link ? scrollToBottom : undefined}
           >
             <div>
               {item.name.split('').map((char, index) => (

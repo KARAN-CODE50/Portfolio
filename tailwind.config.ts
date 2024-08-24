@@ -17,7 +17,8 @@ const config: Config = {
         "glass-border": "url('/border.svg')",
         "text-bg": "url('/textbg.svg')",
         "art-bg": "url('/art.jpg')",
-        "paper-bg": "url('/paper.png')"
+        "paper-bg": "url('/paper.png')",
+        "wave-pattern-bg": "url('/wave-pattern-bg.jpg')"
       },
       fontFamily: {
         nohemi: ['var(--font-nohemi)'],

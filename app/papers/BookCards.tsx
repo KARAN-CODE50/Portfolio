@@ -18,7 +18,7 @@ function BookCards({ title, href }: BookProp) {
             <div className='md:hidden absolute right-3 opacity-5'>
                 <BookOpen size={100} />
             </div>
-            <div className='flex-[3] md:relative hidden'>
+            <div className='flex-[3] hidden md:block md:relative'>
                 <motion.div variants={{ hovered: {x:-10}}} className=' absolute z-50 top-0 bottom-0 left-0 h-fit rounded-xl overflow-hidden my-auto'>
                     <Image alt='book' src="/book-cover.svg" width={150} height={500} />
                 </motion.div>

@@ -1,20 +1,75 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import {motion} from "framer-motion"
-import { Scale } from 'lucide-react'
+import { motion } from "framer-motion"
+import Link from 'next/link'
 
 const workData = [
   {
-    name: 'projects & entrepreneurship'
+    name: 'projects & entrepreneurship',
+    items: [
+      {
+        label: "/pubg-card-img.png",
+        link: '/projects'
+      },
+      {
+        label: "/ai-card-img.png",
+        link: '/projects'
+      },
+      {
+        label: "/goldman-card-img.png",
+        link: '/experience'
+      },
+      {
+        label: "/ncu-card-img.png",
+        link: '/experience'
+      },
+    ],
   },
   {
-    name: 'research & publications'
+    name: 'research & publications',
+    items: [
+      {
+        label: "/patent-card-img.png",
+        link: '/papers'
+      },
+      {
+        label: "/journal-card-img.png",
+        link: '/papers'
+      },
+      {
+        label: "/paper-card-img.png",
+        link: '/papers'
+      },
+      {
+        label: "/book-card-img.png",
+        link: '/papers'
+      },
+    ],
   },
   {
-    name: 'sports & volunteering'
+    name: 'sports & volunteering',
+    items: [
+      {
+        label: "/plant-card-img.png",
+        link: '/volunteering'
+      },
+      {
+        label: "/cadet-card-img.png",
+        link: '/volunteering'
+      },
+      {
+        label: "/com-card-img.png",
+        link: '/volunteering'
+      },
+      {
+        label: "/don-card-img.png",
+        link: '/volunteering'
+      }
+    ],
   },
 ]
+
 
 function Exp() {
 
@@ -38,19 +93,70 @@ function Exp() {
             <div className='flex gap-4'>
               <div className='text-7xl rounded-xl p-10 w-full bg-[#D9D9D9]/20'>projects & <br />entrepreneurship</div>
               <div className=' relative w-[60%] rounded-xl bg-[#D9D9D9]/20 backdrop-blur-md'>
-                <InsideExp side='flex-col' wd='min-w-[16em]' ht='min-h-[8em]'/>
+                <InsideExp side='flex-col' wd='w-[20em]' ht='min-h-[12em]' items={[
+                  {
+                    label: "/pubg-card-img.png",
+                    link: '/projects'
+                  },
+                  {
+                    label: "/ai-card-img.png",
+                    link: '/projects'
+                  },
+                  {
+                    label: "/goldman-card-img.png",
+                    link: '/experience'
+                  },
+                  {
+                    label: "/ncu-card-img.png",
+                    link: '/experience'
+                  },
+                ]} />
               </div>
             </div>
             <div className='flex gap-4'>
               <div className='w-[100%] relative rounded-xl bg-[#D9D9D9]/20'>
-                <InsideExp side='flex-row' wd='min-w-[16em]' ht='min-h-[10em]' />
+                <InsideExp side='flex-row' wd='min-w-[16em]' ht='min-h-[10em]' items={[
+                  {
+                    label: "/patent-card-img.png",
+                    link: '/papers'
+                  },
+                  {
+                    label: "/journal-card-img.png",
+                    link: '/papers'
+                  },
+                  {
+                    label: "/paper-card-img.png",
+                    link: '/papers'
+                  },
+                  {
+                    label: "/book-card-img.png",
+                    link: '/papers'
+                  },
+                ]} />
               </div>
               <div className='text-7xl text-right rounded-xl p-10 w-full bg-[#D9D9D9]/20'>research &<br />publications</div>
             </div>
             <div className='flex gap-4'>
               <div className='text-7xl rounded-xl p-10 w-full bg-[#D9D9D9]/20'>sports &<br />volunteering</div>
               <div className='w-[90%] relative rounded-xl bg-[#D9D9D9]/20'>
-                <InsideExp side='flex-col' wd='min-w-[20em]' ht='min-h-[10em]'/>
+                <InsideExp side='flex-col' wd='w-[20em]' ht='min-h-[12em]' items={[
+                  {
+                    label: "/plant-card-img.png",
+                    link: '/volunteering'
+                  },
+                  {
+                    label: "/cadet-card-img.png",
+                    link: '/volunteering'
+                  },
+                  {
+                    label: "/com-card-img.png",
+                    link: '/volunteering'
+                  },
+                  {
+                    label: "/don-card-img.png",
+                    link: '/volunteering'
+                  }
+                ]} />
               </div>
             </div>
           </div>
@@ -69,7 +175,7 @@ function Exp() {
                   {data.name}
                 </div>
                 <div className='h-[200px] relative rounded-lg bg-[#D9D9D9]/20'>
-                <InsideExp side='flex-row' wd='min-w-[10em]' ht='min-h-[10em]'/>
+                  <InsideExp side='flex-row' wd='min-w-[14em]' ht='min-h-[8em]' items={data.items} />
                 </div>
               </div>
             ))}
@@ -80,24 +186,23 @@ function Exp() {
   )
 }
 
-interface propInside{
+interface propInside {
   side: string,
   wd: string,
   ht: string,
+  items: {
+    label: string,
+    link: string
+  }[]
 }
 
-function InsideExp({side, wd, ht}: propInside) {
-  const items = [
-    '1',
-    '1',
-    '1',
-    '1',
-  ];
+function InsideExp({ side, wd, ht, items }: propInside) {
+
 
   const scrolled = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
-    if(scrolled.current) {
+    if (scrolled.current) {
       scrolled.current.scrollTop = 110;
       scrolled.current.scrollLeft = 110;
     }
@@ -107,7 +212,11 @@ function InsideExp({side, wd, ht}: propInside) {
   return (
     <div ref={scrolled} className={`absolute w-full h-full flex ${side} items-center overflow-auto no-scrollbar`}>
       {items.map((item, index) => (
-        <motion.div whileHover={{scale: 1.1, backgroundColor: 'rgb(217,217,217, 0.7)'}} key={index} className={` ${wd} ${ht} rounded-lg bg-[#D9D9D9]/20 m-2 flex items-center justify-center`}>
+        <motion.div whileHover={{ scale: 1.1, backgroundColor: 'rgb(217,217,217, 0.7)' }} key={index} className={` ${wd} ${ht} rounded-lg m-2 flex items-center justify-center overflow-hidden`}>
+          <Link href={item.link}>
+            <Image alt='cards' className='rounded-lg' width={500} height={500} src={item.label} />
+          </Link>
+          {/* {item} */}
         </motion.div>
       ))}
     </div>

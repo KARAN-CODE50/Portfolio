@@ -54,17 +54,17 @@ function Projects() {
 
 function ProjectCards({title, desc, src, bgColor, link}: ProjectProp) {
     return (
-        <a href={link} target='_blank' className='flex justify-center items-center min-h-[40em] rounded-[24px] bg-[radial-gradient(circle,rgba(255,255,255,1)0%,rgba(93,93,93,1)100%)]'>
-            <div className='m-[1px] rounded-[23px] p-[8px] w-full h-[40em] bg-[#181818]'>
+        <a href={link} target='_blank' className='flex justify-center items-center md:min-h-[40em] min-h-[30em] rounded-[24px] bg-[radial-gradient(circle,rgba(255,255,255,1)0%,rgba(93,93,93,1)100%)]'>
+            <div className='m-[1px] rounded-[23px] p-[8px] w-full md:h-[40em] h-[30em] bg-[#181818]'>
                 <motion.div initial='initial' whileHover='hovered' className='bg-[radial-gradient(circle,rgba(255,255,255,1)0%,rgba(93,93,93,1)100%)] p-[0.7px] h-full rounded-[16px]'>
-                    <motion.div variants={{ initial: {background: 'radial-gradient(circle,rgba(38,38,38,1) 0%,rgba(24,24,24,1) 100%)'}, hovered: {background: bgColor}}} transition={{ ease: 'easeInOut', duration: 0.5}} className='h-full relative overflow-hidden px-16 py-8 rounded-[15.3px]'>
+                    <motion.div variants={{ initial: {background: 'radial-gradient(circle,rgba(38,38,38,1) 0%,rgba(24,24,24,1) 100%)'}, hovered: {background: bgColor}}} transition={{ ease: 'easeInOut', duration: 0.5}} className='h-full relative overflow-hidden md:px-16 p-8 md:py-8 rounded-[15.3px]'>
                         <div className='flex justify-between relative z-20'>
-                            <p className='text-3xl pb-2 font-[400] tracking-wide'>{title}</p>
+                            <p className='md:text-3xl text-2xl pb-2 font-[400] tracking-wide'>{title}</p>
                             <motion.div variants={{ hovered: {x:10, scale: 1.05}}} transition={{ ease: 'easeInOut', duration: 0.5}}>
                                 <ArrowRight />
                             </motion.div>
                         </div>
-                        <p className=' relative z-20 text-md pb-10 font-[200] tracking-wide'>{desc}</p>
+                        <p className=' relative h-[140px] md:h-auto text-ellipsis overflow-hidden mb-10 z-20 md:mb-0 md:text-md text-sm md:pb-10 font-[200] tracking-wide'>{desc}</p>
                         <motion.div variants={{ hovered: {y:-5, scale: 1.03}}} transition={{ ease: 'anticipate', duration: 0.5}} className=' relative z-20 flex items-center justify-center'>
                             <Image className='rounded-xl' src={src} alt='pubgimage' width={1150} height={500} />
                         </motion.div>
