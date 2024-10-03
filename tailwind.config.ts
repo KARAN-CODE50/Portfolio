@@ -22,7 +22,8 @@ const config: Config = {
       },
       fontFamily: {
         nohemi: ['var(--font-nohemi)'],
-        times: ['var(--font-times)']
+        times: ['var(--font-times)'],
+        inter: ['var(--font-inter)'],
       },
       colors: {
         'base-purple': '#6935F5',

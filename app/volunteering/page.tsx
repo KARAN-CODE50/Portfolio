@@ -1,9 +1,7 @@
-"use client"
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from '../components/Navbar'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { ArrowLeftCircle, ArrowRightCircle, CircleChevronLeft, CircleChevronRight, ExternalLink, Instagram } from 'lucide-react'
+import VolCard from './VolCard'
+import YogaCard from './YogaCard'
 
 const VolData = [
     {
@@ -51,93 +49,25 @@ const VolData = [
     },
 ]
 
-interface VolProps {
-    title: string,
-    company: string,
-    date: string,
-    sector: string,
-    desc: string,
-    src: string[]
-}
+
 
 function Volunteering() {
     return (
         <div className='text-white md:px-10 bg-repeat bg-grid-wave min-h-screen bg-contain font-nohemi'>
             <Navbar />
-            <div className='md:mx-20 mx-7 md:mt-16 mt-10 flex flex-col md:gap-3 gap-2'>
-                <div className='leading-[25px] flex md:text-6xl text-2xl'>
-                    <p>Volunteering</p>
-                </div>
-                <div className='md:grid md:grid-cols-2 gap-4'>
+            <div className='md:mx-20 mx-7 md:mt-16 mt-10 flex flex-col md:gap-3'>
+                <div className='md:grid md:grid-cols-2 gap-4 flex flex-col'>
                     {VolData.map((i, idx) => (
                         <VolCard key={idx} title={i.title} company={i.company} date={i.date} sector={i.sector} desc={i.desc} src={i.src} />
                     ))}
+                </div>
+                <div>
+                    <YogaCard />
                 </div>
             </div>
         </div>
     )
 }
 
-function VolCard({ title, company, date, sector, desc, src }: VolProps) {
-    const [index, setIndex] = useState(0);
-
-    const forward = () => {
-        setIndex((prevIndex) => (prevIndex + 1) % src.length);
-    };
-
-    const backward = () => {
-        setIndex((prevIndex) => (prevIndex - 1 + src.length) % src.length);
-    };
-
-    // console.log(src.length)
-
-    return (
-        <motion.div
-            className='overflow-hidden flex flex-col border rounded-lg p-5 bg-[radial-gradient(circle,rgba(27,27,27,1)0%,rgba(0,0,0,1)300%)] transition-transform'
-        >
-            <div className='flex-[2] mb-4'>
-                <div className='flex flex-col mb-2'>
-                    <p className='md:text-3xl text-2xl tracking-wide'>{title}</p>
-                    <p className='md:text-xl text-lg font-light'>{company}</p>
-                    <p className='md:text-lg text-sm tracking-wider font-light'>{date}</p>
-                </div>
-                <p className='text-base text-justify md:text-left leading-relaxed font-light'>{desc}</p>
-            </div>
-            {src.length !== 1 ? ( <div className='flex-1 flex items-center justify-center'>
-                <motion.div
-                    className='relative w-full h-[20em] border rounded-xl overflow-hidden'>
-                        <div className=' absolute inset-0 bg-[linear-gradient(90deg,#000_0%,rgba(115,115,115,0)20%,rgba(115,115,115,0)80%,#000_100%)]'></div>
-                    <CircleChevronLeft
-                        onClick={backward}
-                        color='#fff'
-                        strokeWidth={2}
-                        size={25}
-                        className='absolute opacity-70 left-3 top-1/2 transform -translate-y-1/2 cursor-pointer'
-                    />
-                    <Image
-                        className='w-full h-full object-cover select-none'
-                        alt='image'
-                        src={src[index]}
-                        width={500}
-                        height={500}
-                    />
-                    <CircleChevronRight
-                        onClick={forward}
-                        color='#fff'
-                        strokeWidth={2}
-                        size={25}
-                        className='absolute opacity-70 right-3 top-1/2 transform -translate-y-1/2 cursor-pointer'
-                    />
-                </motion.div>
-            </div>) : (
-                <a href='https://www.instagram.com/letshelpeveryone/' className=' flex gap-2 items-center p-5 justify-center rounded-md bg-[linear-gradient(45deg,_#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)]'>
-                    <Instagram size={30}/>
-                    Instagram Page
-                    <ExternalLink size={15} />
-                </a>
-            )}
-        </motion.div>
-    );
-}
 
 export default Volunteering
