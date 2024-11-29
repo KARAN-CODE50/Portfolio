@@ -8,11 +8,18 @@ import Footer from '../components/Footer'
 
 const projectData = [
     {
+        title: 'Resume Builder',
+        desc: 'Created a web-based tool that allows users to create and customize a professional resume to their desired specifications.',
+        src: '/resume-maker.png',
+        bgColor: 'radial-gradient(circle, rgba(10, 208, 181,1) 0%, rgba(24,24,24,1) 120%)',
+        link: 'https://resume-maker-delta.vercel.app/'
+    },
+    {
         title: 'Gaming Account Marketplace',
         desc: 'I developed a thriving marketplace for buying and selling PUBG accounts. Key features are smooth user experience, Login/signup with google security, Mobile responsive. and payment integration through stripe',
         src: '/pubg-project.png',
         bgColor: 'radial-gradient(circle, rgba(26,93,157,1) 0%, rgba(24,24,24,1) 120%)',
-        link: 'https://pubg-trade-hub.vercel.app/'
+        link: 'https://www.gamingtradehub.shop/'
     },
     {
         title: 'AI Saarthi | Interactive AI-Powered Web Application',

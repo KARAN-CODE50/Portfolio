@@ -16,7 +16,7 @@ interface VolProps {
 
 function VolCard({ title, company, date, sector, desc, src }: VolProps) {
     const [index, setIndex] = useState(0);
-    const [ht, setht] = useState('100px');
+    const [ht, setht] = useState('[100px]');
     const [isReadMore, setIsReadMore] = useState(true);
 
     function readMore() {
@@ -44,8 +44,8 @@ function VolCard({ title, company, date, sector, desc, src }: VolProps) {
                     <p className='md:text-lg text-white/50 font-inter font-light'>{date}</p>
                 </div>
                 <div className='mb-4'>
-                    <p className={`text-base h-[${ht}] text-ellipsis overflow-hidden md:text-left font-extralight font-inter`}>{desc}</p>
-                    {isReadMore && <p onClick={readMore} className='font-inter hover:underline'>Read More</p>}
+                    <p className={`text-base h-${ht} text-ellipsis overflow-hidden md:text-left font-extralight font-inter`}>{desc}</p>
+                    {isReadMore && <p onClick={readMore} className='md:hidden font-inter hover:underline'>Read More</p>}
                 </div>
             </div>
             {src.length !== 1 ? ( <div className='flex-1 flex items-center justify-center'>

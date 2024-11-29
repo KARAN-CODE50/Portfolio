@@ -8,7 +8,7 @@ function YogaCard() {
       <p className=" text-3xl md:text-6xl">Yoga</p>
       <div className="border md:p-7 p-5 mt-3 rounded-xl blur-bg-sm">
         <div className="flex flex-col md:grid grid-cols-4 grid-rows-2 gap-5 md:h-[40em]">
-          <div className=" md:border-4 border-blue-400/50 relative col-span-2 bg-white rounded-lg overflow-hidden h-[9em]">
+          <div className=" md:border-4 border-blue-400/50 relative col-span-2 bg-white rounded-lg overflow-hidden h-[9em] md:h-full">
             <video
               autoPlay
               muted
@@ -29,7 +29,7 @@ function YogaCard() {
           <div className=" col-span-1 md:border-4 border-green-300/50 overflow-hidden bg-white rounded-lg">
             <Image src="/yoga/pose6.jpg" width={500} height={500} alt="pose" />
           </div>
-          <div className=" md:border-4 border-blue-400/50 relative overflow-hidden col-span-2 bg-white rounded-lg h-[9em]">
+          <div className=" md:border-4 border-blue-400/50 relative overflow-hidden col-span-2 bg-white rounded-lg h-[9em] md:h-full">
             <video
               autoPlay
               muted

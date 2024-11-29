@@ -10,7 +10,7 @@ function LandingPage() {
       <div className='md:hidden font-nohemi font-[300] leading-[1.2em] text-[2.1em] text-center pb-10 mx-6'>
         <p>
           Blending
-          <span className=' font-semibold'> research,</span> 
+          <span className=' font-semibold'> research, </span> 
           <span className=' font-semibold'>technology, </span> 
           and 
           <span className=' font-semibold'> innovation </span>
@@ -21,7 +21,7 @@ function LandingPage() {
         <p>
           Blending
           <span className=' font-semibold'> research,<br /></span> 
-          <span className=' font-semibold'>technology,</span> 
+          <span className=' font-semibold'>technology, </span> 
           and 
           <span className=' font-semibold'> innovation </span>
           to <br /> fuel 
