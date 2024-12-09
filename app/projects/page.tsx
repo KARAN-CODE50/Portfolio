@@ -16,7 +16,7 @@ const projectData = [
     },
     {
         title: 'Phishing Detector',
-        desc: '',
+        desc: 'Real-time results detect phishing links and malware domains with accurate, deep machine learning analysis. Check URLs for phishing, malware, viruses, abuse, or reputation issues.',
         src: '/phishing.png',
         bgColor: 'radial-gradient(circle, rgba(193, 193, 193,1) 0%, rgba(24,24,24,1) 120%)',
         link: 'https://phishing-detector-zeta.vercel.app/'
