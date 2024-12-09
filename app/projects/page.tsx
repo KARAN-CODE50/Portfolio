@@ -15,6 +15,13 @@ const projectData = [
         link: 'https://resume-maker-delta.vercel.app/'
     },
     {
+        title: 'Phishing Detector',
+        desc: '',
+        src: '/phishing.png',
+        bgColor: 'radial-gradient(circle, rgba(193, 193, 193,1) 0%, rgba(24,24,24,1) 120%)',
+        link: 'https://phishing-detector-zeta.vercel.app/'
+    },
+    {
         title: 'Gaming Account Marketplace',
         desc: 'I developed a thriving marketplace for buying and selling PUBG accounts. Key features are smooth user experience, Login/signup with google security, Mobile responsive. and payment integration through stripe',
         src: '/pubg-project.png',
@@ -71,10 +78,12 @@ function ProjectCards({title, desc, src, bgColor, link}: ProjectProp) {
                                 <ArrowRight />
                             </motion.div>
                         </div>
+
                         <p className=' relative h-[140px] md:h-auto text-ellipsis overflow-hidden mb-10 z-20 md:mb-0 md:text-md text-sm md:pb-10 font-[200] tracking-wide'>{desc}</p>
                         <motion.div variants={{ hovered: {y:-5, scale: 1.03}}} transition={{ ease: 'anticipate', duration: 0.5}} className=' relative z-20 flex items-center justify-center'>
                             <Image className='rounded-xl' src={src} alt='pubgimage' width={1150} height={500} />
                         </motion.div>
+                        
                     </motion.div>
                 </motion.div>
             </div>
