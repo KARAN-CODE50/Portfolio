@@ -36,7 +36,18 @@ const icons = {
 
 const expData: ExpData[] = [
   {
-    year: "May 2024 - Jul 2024 ",
+    year: "Sep 2024 - Present",
+    duration: "Ongoing",
+    role: "Research and Development Product Manager",
+    position: "Full-time",
+    company: "RAJ COMMODITIES PRIVATE LIMITED",
+    location: "Suratgarh, Rajasthan, India · Remote",
+    desc: "As a Product Manager and Financial Analyst at Raj Commodities, I led the development and enhancement of our trading platform, ensuring a seamless and user-friendly experience for our clients. As a small team we tried to implement innovative features, analyzed market trends to identify new opportunities, and provided financial insights to inform product strategies. My role involved driving user engagement, ensuring compliance with regulatory standards, and optimizing product performance through data-driven insights. Additionally, I conducted financial analysis to support strategic decision-making and enhance the firm's market positioning.",
+    icon: "NotebookPen",
+    image: "raj.svg",
+  },
+  {
+    year: "May 2024 - Nov 2024 ",
     duration: "3 Months",
     role: "Research Scholar",
     position: "Internship",
@@ -130,7 +141,7 @@ function Experience() {
             const Icon = icons[item.icon];
             return (
               <React.Fragment key={index}>
-                {index % 2 === 0 ? (
+                {index % 2 !== 0 ? (
                   <>
                     <motion.div
                       variants={fadeInAnimationVariants}

@@ -18,7 +18,7 @@ const patentsData = [
     title: "Plant Pathogen Detection Device",
     desc: "The Plant Pathogen Detection Device is an innovative tool designed to quickly and accurately identify harmful pathogens in plants. Utilizing advanced sensor technology, this device helps farmers and researchers monitor plant health, prevent disease spread, and ensure optimal crop yields, contributing significantly to sustainable agriculture practices.",
     image: "/patent-plant-image.svg",
-    href: "https://drive.google.com/drive/folders/1SwgwMR3Ka3n6YS-d5DDx_EhdjEzy-mML"
+    href: "https://drive.google.com/drive/folders/1skMfjlhZROZ65UhkFP5vXm2W16BIVjeq"
   },
 ]
 
