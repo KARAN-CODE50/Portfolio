@@ -29,7 +29,11 @@ function Certificate() {
           >
             <div className="flex justify-between relative z-20">
               <p className="md:text-3xl text-2xl pb-2 font-[600] tracking-wide">
-              National Stock Exchange ₹
+              National Stock Exchange India ₹
+              <br />
+              <span className="text-lg">
+                Equity Derivatives Certification
+              </span>
               </p>
               <motion.div
                 variants={{ hovered: { x: 10, scale: 1.05 } }}
